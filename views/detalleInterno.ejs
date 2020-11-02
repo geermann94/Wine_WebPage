@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head.ejs')  %> 
+  
+  <!-- Own Stylesheet -->
+  <link rel="stylesheet" href="/css/app.css">
+
+	<title>Detalle-producto</title>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="main-header">
+    <%- include('partials/header.ejs') %> 
+  </header>            
+  <!-- /Header -->
+
+    <div class="list-group margin">
+        
+        <div class="card" style="width: 18rem;">
+            <img src="/images/<%= idProducto.image %>" class="card-img-top" alt="imagen del producto">
+            <div class="card-body">
+              <h5 class="card-title"><%= idProducto.name %></h5>
+              <p class="card-text"><%= idProducto.description %> </p>
+              <p class="card-text">Precio : $<%= idProducto.price %> </p>
+              <p class="card-text">Descuento : <%= idProducto.discount %> % </p>
+              <p class="card-text">precio final : $<%= precioFinal %> </p>
+              <p class="card-text">Categoria : <%= idProducto.category %> </p>
+              <p><a href="/product/edit/<%= idProducto.id %>" class="btn btn-primary">MODIFICAR</a></p>
+              <p><a href="/product/delete/<%= idProducto.id %>" class="btn btn-primary">BORRAR</a></p>
+            </div>
+          </div>
+        
+      </div>
+
+
+    <%- include('partials/jqueryPopper.ejs')  %> 
+</body>
+</html>

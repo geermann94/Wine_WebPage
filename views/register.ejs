@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head.ejs')  %>
+	
+    <!-- Own Stylesheet -->
+    <link rel="stylesheet" href="/css/app.css">
+	
+	
+	<title>Ligier-Register</title>
+
+</head>
+<body>
+
+    	<!-- Header -->
+	<header class="main-header">
+		<%- include('partials/header.ejs') %> 
+	</header>
+
+	    <!-- /Header -->
+
+
+    <div class="margin">
+        <% if (typeof errors != "undefined"){ %> 
+            <p  style="color: red;"> ERROR !</p>
+            <ul>
+                <% for(let i = 0; i < errors.length; i++) {%> 
+                    <li> 
+                        <%= errors[i].msg %> 
+                    </li>
+                <% } %> 
+            </ul>
+        <% } %> 
+    </div>
+
+    <div class="margin">
+        <form action="/register" method="POST">
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Nombre</label>
+                <input type="text" name="Nombre" class="form-control" id="exampleInputPassword1">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Apellido</label>
+                <input type="text" name="Apellido" class="form-control" id="exampleInputPassword1">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" name="Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" name="Contraseña" class="form-control" id="exampleInputPassword1">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Repetir Contraseña</label>
+                <input type="password" name="repContraseña" class="form-control" id="exampleInputPassword1">
+            </div>
+            
+            <button type="submit" class="btn btn-outline-dark">Submit</button>
+            
+        </form>
+    </div>
+
+    <!-- footer -->
+    <%- include('partials/footer.ejs')  %>
+    <!-- /footer -->
+
+
+    <%- include('partials/jqueryPopper.ejs')  %> 
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head.ejs')  %> 
+
+    <!-- Own Stylesheet -->
+    <link rel="stylesheet" href="/css/style_product.css">
+
+    <title>Detalle del producto: <%= idProducto.name %></title>
+</head>
+<body>
+
+    <header class="main-header">
+        <%- include('partials/header.ejs') %> 
+    </header>
+
+    <!-- Product -->
+	<div class="producto">
+		<h3 class="detalle">Detalle del producto: <%= idProducto.name %> </h3>
+		<div class="caja">
+			<div class="cajaProducto">
+				<img src="/images/<%= idProducto.image %>" alt="imagen del producto">
+				<p class="descripcion"><%= idProducto.description %></p>
+			</div>
+			<div class="cajaPrecio">
+				<h2><%= idProducto.name %></h2>
+				<% if(idProducto.discount == 0) { %>
+					<p class="precioReal"> $ <%= idProducto.price %></p> <% } else { %>
+					<p class="descuento"> $ <s><%= idProducto.price %></s> /  <%= idProducto.discount %> % OFF</p>
+					<p class="precioReal"> $ <%= precioFinal %></p> 
+				<%}%>
+				<button type="button" class="btn btn-primary btn-lg btn-block">COMPRAR AHORA</button>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- /Product -->
+
+
+
+
+    <%- include('partials/jqueryPopper.ejs')  %> 
+</body>
+</html>

@@ -1,0 +1,285 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+
+/* Variables */
+:root {
+
+  --dark-blue: #03264C;
+  --light-blue: #1259c3;
+  --gray: #666666;
+  --light-gray: #ebebeb;
+  --green: #39b54a;
+  --base-font-family: 'Roboto', sans-serif
+}
+
+/* Basics */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100vh;
+  margin: 0;
+  font-size: 10px;
+}
+
+body {
+  font-family: var(--base-font-family);
+  font-weight: 300;
+  background-color: var(--light-gray);
+}
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+
+input {
+  font-family: inherit;
+}
+
+.margin{
+  margin: 3%;
+}
+
+
+/* Main Header */
+.main-header {
+  padding: 15px 0;
+  background-color: var(--dark-blue);
+  color: var(--light-gray);
+}
+
+.main-header_home-link,
+.main-header_credit-link {
+  display: block;
+}
+
+
+
+
+/* Main Navbar */
+
+.banner {
+  display: none;
+}
+
+.main-navbar {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left-navbar,
+.right-navbar {
+  font-size: 1.5em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+}
+
+.left-navbar a,
+.right-navbar a {
+  display: block;
+  padding: 5px 0;
+  border-bottom: none;
+}
+
+.left-navbar a:hover,
+.right-navbar a:hover {
+  color: var(--light-blue);
+}
+
+
+
+
+/* Banner */
+.banner {
+  background-image: url(/images/img-home-banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100px;
+}
+
+
+
+/* Products */
+
+.producto {
+    width: 90%;
+    margin: 20px auto;
+    
+}
+  
+.caja {
+    background-color: white;
+    padding: 5%;
+    border-radius: 5px;
+}
+  
+.detalle {
+    color: var(--gray);
+    margin-bottom: 10px;
+  }
+  
+  
+.cajaProducto {
+    margin-bottom: 40px;
+   
+  }
+  
+.descripcion {
+    font-size: 13px;
+    
+  }
+  
+.descuento {
+    color: var(--green);
+    font-size: 15px;
+  }
+  
+.precioReal {
+    font-size: 40px;
+    text-decoration: solid;
+    
+  }
+
+
+
+/* Footer */
+.main-footer {
+  background-color: #ffffff;
+  padding: 20px 0;
+  margin-top: 80px;
+}
+
+.footer-data {
+  text-align: center;
+}
+
+.footer-data i {
+  color: var(--light-blue);
+  font-size: 3.5em;
+}
+
+.footer-data h2 {
+  color: var(--gray);
+  font-size: 2.4em;
+  font-weight: 400;
+}
+
+.footer-data p {
+  color: var(--gray);
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+.sub-footer {
+  border-top: 1px solid var(--light-gray);
+  background-color: #ffffff;
+}
+
+.sub-footer p {
+  margin: 0;
+  color: var(--gray);
+  padding: 15px 0;
+}
+
+
+
+
+/* Media-Queries */
+
+@media (min-width: 425px) {
+  .banner {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+ 
+  .banner {
+    height: 320px;
+  }
+
+
+  .main-navbar,
+  .left-navbar,
+  .right-navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  
+  .left-navbar li {
+    margin-right: 15px;
+  }
+  
+  .right-navbar li {
+    margin-left: 15px;
+  } 
+
+  .main-footer {
+    padding: 40px 0;
+  }
+
+  .footer-data {
+    width: 95%;
+    margin: auto;
+  }
+
+  .producto {
+    width: 80%;
+    /* height: 60%; */
+  }
+
+  .caja {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .detalle {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    font-size: 25px;
+  }
+
+  .cajaProducto {
+    width: 65%;
+  }
+
+  .descripcion {
+    font-size: 15px;
+    
+  }
+
+  .cajaPrecio {
+    width: 30%;
+    margin-left: 5%;
+  }
+
+
+}

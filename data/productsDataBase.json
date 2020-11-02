@@ -1,0 +1,56 @@
+[
+ {
+  "id": "1",
+  "name": "Nombre 1",
+  "price": "2500",
+  "discount": "15",
+  "category": "in-sale",
+  "description": "DESCRIPCION 1",
+  "image": "img-default.jpg"
+ },
+ {
+  "id": "2",
+  "name": "Nombre 2",
+  "price": "2000",
+  "discount": "20",
+  "category": "in-sale",
+  "description": "DESCRIPCION 2",
+  "image": "img-default.jpg"
+ },
+ {
+  "id": "3",
+  "name": "Nombre 3",
+  "price": "1800",
+  "discount": "20",
+  "category": "in-sale",
+  "description": "DESCRIPCION 3",
+  "image": "img-default.jpg"
+ },
+ {
+  "id": "4",
+  "name": "Nombre 4",
+  "price": "1500",
+  "discount": "15",
+  "category": "in-sale",
+  "description": "DESCRIPCION 4",
+  "image": "img-default.jpg"
+ },
+ {
+  "id": "5",
+  "name": "Nombre 5",
+  "price": "800",
+  "discount": "0",
+  "category": "",
+  "description": "DESCRIPCION 5",
+  "image": "img-default.jpg"
+ },
+ {
+  "id": "6",
+  "name": "Nombre 6",
+  "price": "600",
+  "discount": "0",
+  "category": "",
+  "description": "DESCRIPCION 6",
+  "image": "img-default.jpg"
+ }
+]

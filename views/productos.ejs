@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head.ejs')  %> 
+    
+     <!-- Own Stylesheet -->
+     <link rel="stylesheet" href="/css/app.css">
+
+	<title>Lista-Productos</title>
+</head>
+<body>
+
+    <!-- Header -->
+        <header class="main-header">
+            <%- include('partials/header.ejs') %> 
+        </header>            
+    <!-- /Header -->
+
+    <div class="container products-wrapper">
+		<div class="row">
+			<div class="col-12">
+				<h2 class="products-title">Productos</h2>
+			</div>
+
+			<% productos.forEach( producto => { %>
+				<div class="col-12 col-sm-6 col-lg-3">
+					<section class="product-box">
+						<a href="/product/detail/<%= producto.id %>/<%= producto.category %> ">
+							<figure class="product-box_image">
+								<img src="/images/<%= producto.image %> " alt="imagen de producto">
+							</figure>
+							<article class="product-box_data">
+								<h2>$ <%= producto.price - (producto.discount * producto.price / 100)  %> </h2>
+								<span><%= producto.discount %>% OFF</span>
+								<p><%= producto.name %></p>
+								<i class="fas fa-truck"></i>
+							</article>
+						</a>
+					</section>
+				</div>
+				<% }) %> 
+			
+		</div>
+	</div>
+ 
+
+
+	<!-- footer -->
+    <%- include('partials/footer.ejs')  %>
+    <!-- /footer -->
+
+    
+    <%- include('partials/jqueryPopper.ejs')  %> 
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head.ejs')  %> 
+    
+     <!-- Own Stylesheet -->
+     <link rel="stylesheet" href="/css/app.css">
+
+	<title>Lista-Productos</title>
+</head>
+<body>
+
+    <!-- Header -->
+        <header class="main-header">
+            <%- include('partials/header.ejs') %> 
+        </header>            
+    <!-- /Header -->
+
+
+    <div class="list-group margin">
+        
+        <h1>Productos :</h1>
+
+        <% for( let i = 0; i < productos.length; i++ ) { %>
+        
+            <a href="/product/detail/<%= productos[i].id %>" class="list-group-item list-group-item-action">
+                <%= productos[i].name %>
+            </a>
+
+        <% } %>
+
+        <a href="/product/Crear" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Crear Producto</a>
+
+      </div>
+
+    
+    <%- include('partials/jqueryPopper.ejs')  %> 
+
+</body>
+</html>

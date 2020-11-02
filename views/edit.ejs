@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head.ejs')  %> 
+  
+  <!-- Own Stylesheet -->
+  <link rel="stylesheet" href="/css/app.css">
+
+	<title>Modificar-Producto</title>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="main-header">
+    <%- include('partials/header.ejs') %> 
+  </header>            
+  <!-- /Header -->
+
+
+  <div class="margin">
+    <% if (typeof errors != "undefined"){ %> 
+        <p  style="color: red;"> ERROR !</p>
+        <ul>
+            <% for(let i = 0; i < errors.length; i++) {%> 
+                <li> 
+                    <%= errors[i].msg %> 
+                </li>
+            <% } %> 
+        </ul>
+    <% } %> 
+  </div>
+
+
+  <div class="margin">
+    <form action="/product/edit/<%= idProducto.id %>" method="POST">
+
+        <div class="form-group">
+            <label for="">Descripcion</label>
+            <input type="text" name="Descripcion" value="<%= idProducto.description %>" class="form-control" id="exampleInputPassword1">
+        </div>
+
+        <div class="form-group">
+            <label for="">Precio</label>
+            <input type="number" name="Precio" value="<%= idProducto.price %>" class="form-control" id="exampleInputPassword1">
+        </div>
+
+        <div class="form-group">
+            <label for="">Descuento</label>
+            <input type="number" name="Descuento" value="<%= idProducto.discount %>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+
+
+        <div class="form-group">
+          <label for="">Categoria</label>
+          <select class="form-control" name="Categoria">
+            <option>None</option>
+            <option>in-sale</option>
+          </select>
+        </div>
+        
+        <button type="submit" class="btn btn-outline-dark">Submit</button>
+        
+    </form>
+  </div>
+
+
+  <%- include('partials/jqueryPopper.ejs')  %> 
+</body>
+</html>

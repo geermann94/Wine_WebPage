@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head.ejs')  %>
+	
+    <!-- Own Stylesheet -->
+    <link rel="stylesheet" href="/css/app.css">
+
+    <title>Profile</title>
+</head>
+<body>
+
+    	<!-- Header -->
+	<header class="main-header">
+		<%- include('partials/header.ejs') %> 
+	</header>
+
+	    <!-- /Header -->
+
+    <div class="alert alert-success margin" role="alert">
+        <h4 class="alert-heading">Registrado con exito!</h4>
+        <hr>
+        <h4>Nombre:</h4> 
+        <p class="mb-0"> <%= usuarioNuevo.name %> </p>
+        <h4>Apellido:</h4> 
+        <p class="mb-0"> <%= usuarioNuevo.lastName %> </p>
+        <h4>Email:</h4> 
+        <p class="mb-0"> <%= usuarioNuevo.email %> </p>
+    </div>
+
+    <a href="/" class="margin"><button type="button" class="btn btn-outline-dark">OK!</button></a> 
+    
+
+    <!-- footer -->
+    <%- include('partials/footer.ejs')  %>
+    <!-- /footer -->
+
+
+    <%- include('partials/jqueryPopper.ejs')  %> 
+</body>
+</html>

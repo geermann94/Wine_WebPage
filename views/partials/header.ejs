@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row align-items-center">
+        <div class="col-5 col-md-2">
+            <a href="/" class="main-header_home-link">
+                <img src="/images/logo-wine.svg">
+            </a>
+        </div>
+        
+    </div>
+    
+
+    <nav class="main-navbar">
+
+        <ul class="left-navbar">
+            <% if(locals.usuarioLogueado){ %>
+                
+                <li><i class="fas fa-user"></i> <%= locals.usuarioLogueado.name %></li>
+                <li><a href="/login/salir">Log Out</a></li>
+                
+            <% } else { %>
+                <li><a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
+            <%}%> 
+        </ul>
+
+        <ul class="right-navbar">
+            <li><a href="/product/all">Productos <i class="fas fa-shopping-cart"></i> </a></li>
+            <li><a href="/register">Creá tu cuenta <i class="far fa-address-card"></i></a></li>
+            <% if(locals.usuarioLogueado){ %>
+                <li><a href="/product">Editar Productos <i class="far fa-edit"></i> </a></li>
+            <% } %> 
+             
+            
+        </ul>
+    </nav>
+</div>
